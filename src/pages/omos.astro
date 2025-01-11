@@ -1,0 +1,196 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import { Image } from 'astro:assets';
+import RasmusOgMichael from "../assets/images/rasmusogmichael.webp";
+import Medarbejdere from "../assets/images/medarbejdere.webp";
+import Vinglas1 from "../assets/images/vinglas1.svg";
+import VinFlaskeLeft from "../assets/images/vinflaskeleft.svg";
+import Vinglas2 from "../assets/images/vinglas2.svg";
+import VinFlaskeRight from "../assets/images/vinflaskeright.svg";
+import Vinglas3 from "../assets/images/vinglas3.svg";
+import Om from "../assets/images/om.svg";
+import Os from "../assets/images/os.svg";
+import OmOs from "../assets/images/omos-skrift.svg";
+import Erfaring from "../assets/images/erfaring.webp";
+import Hvorfor from "../assets/images/hvorfor.webp";
+import VoresWish  from "../assets/images/voreswish.webp";
+---
+<style>
+    h1{
+        @apply italic;
+        @apply text-orange-500
+    }
+</style>
+<MainLayout>
+<article class="relative grid gap-xs md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto p-xs py-8xl">
+    <!-- display tekst sættes til absolute, så det går udover billederne -->
+    <div
+    data-aos="fade-in"
+    data-aos-duration="1000"
+     class="z-10 p-xs absolute flex flex-row gap-xs md:gap-sm w-full md:hidden">
+        <Image class="w-1/2 aspect-1 pt-sm sm:w-1/3 " src={Om} alt="om skrift"></Image>
+        <Image class="w-1/3  aspect-1 pt-6xl  sm:w-1/4" src={Os} alt="os"></Image>
+    </div>
+    <Image
+    data-aos="fade-in"
+    data-aos-duration="1000"
+     class="z-10 absolute pt-sm hidden md:block w-2/4 " src={OmOs} alt=" om os skrift"></Image>
+    <div
+     data-aos="fade-right"
+     class="">
+        <Image class="mt-lg w-2/3 md:w-full" src={RasmusOgMichael} alt="Billede af ejerne"></Image>
+    </div>
+    <div class="self-center mt-xs">
+         <!-- vinglas og flasker-->
+       <div class= "w-2/3 md:w-full flex flex-row justify-between  ">
+            <Image 
+            data-aos="fade-up" 
+            class=" vippe delay aspect-[73/138] w-[15%]" src={Vinglas1} alt="vinglas illustration"></Image>
+            <Image
+            data-aos="fade-up" 
+            data-aos-delay="200" 
+             class="vippe aspect-[73/138]  w-[15%]" src={VinFlaskeLeft} alt="vinflaske illustration"></Image>
+            <Image
+            data-aos="fade-up" 
+            data-aos-delay="400" 
+             class="vippe delay aspect-[73/138] w-[15%]" src={Vinglas2} alt="vinglas illustration"></Image>
+            <Image
+            data-aos="fade-up" 
+            data-aos-delay="600" 
+             class="vippe aspect-[73/138] w-[15%]" src={VinFlaskeRight} alt="vinflaske illustration"></Image>
+            <Image
+            data-aos="fade-up" 
+            data-aos-delay="800" 
+             class="vippe delay aspect-[73/138] w-[15%]" src={Vinglas3} alt="vinglas illustration"></Image>
+       </div>
+        <!-- medarbejdere billeder, fjernes på mobil -->
+        <Image
+        data-aos="fade-left"
+         class="hidden md:block" src={Medarbejdere} alt="Billede af medarbejderne"></Image>
+    </div>
+</article>
+
+<article class="hidden md:grid md:grid-cols-2 relative">
+    <section class=" grid relative border-orange-500 border-x border-t">
+        <div class="h-[80vh] relative ">
+        <div class= "h-[500px] lg:h-[420px] md:sticky md:top-[10%] self-start bg-offwhite md:bg-transparent grid md:border-orange-500 ">
+            <div class="self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+                <h1>Erfaring & viden</h1>
+                <p>
+                    Vi har tilsammen over 30 års erfaring i restaurationsbranchen, hvor naturvin altid har været en central del af vores arbejde.
+                    Vores rejse har ført os fra Michelin-restauranter til nogle af landets bedste vinbarer, hvilket har givet os både ekspertise og passion for vinens verden. 
+                    Med denne erfaring og vores nysgerrighed stræber vi efter at skabe fantastiske oplevelser for jer.
+                </p> 
+            </div>
+        </div> 
+        </div>
+       
+        <div class="h-[100vh]">
+            <div class="md:sticky md:top-[10%] self-start md:border-orange-500 border-t border-b  h-[500px] lg:h-[420px] ">
+               <Image class= " md:object-cover  md:h-full  w-full" src={Hvorfor} alt="Billede af vinhylde"></Image>
+           </div>
+        </div>
+        <div class=" relative">
+            <div class=" h-[500px] lg:h-[420px]   bg-offwhite md:bg-transparent grid md:border-orange-500 ">
+                <div class="self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+                    <h1>Vores ønske</h1>
+                    <p>
+                        Vores arbejde med Naturvinskassen handler først og fremmest om at videreformidle og dele oplevelser, med alle vores medlemmer! Det er lige præcis dét, som vi hele tiden bestræber os på. 
+                        Vi støder på rigtig, rigtig mange vinbønder og smager endnu flere vine. Noget smager godt, noget smager knap så godt, og noget smager så godt, at vi bliver nødt til at dele det med alle vores medlemmer.
+                    </p>
+                </div>
+            </div> 
+        </div>
+     
+
+    </section>
+    <section class="border-orange-500 border-t border-r  md:sticky md:top-[10%] self-start">
+        <div class="h-[80vh]  relative">
+            <div class="md:sticky md:top-[10%] self-center h-[500px] lg:h-[420px]  md:border-orange-500 border-b  ">
+                <Image class=" object-cover md:h-full  w-full" src={Erfaring} alt="Billede af en person, der hælder vin"></Image>
+            </div>
+        </div>
+        <div class="h-[500px] lg:h-[420px] self-start  bg-offwhite md:bg-transparent grid md:border-orange-500 md:order-2">
+            <div class=" self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+           <h1 class="hyphens-auto">Hvorfor Naturvinskassen?</h1>
+           <p>
+               Vi ønskede en legeplads til vores skøre idéer, nysgerrighed efter nye vine og vinbønder samt vores trang til at dele vinoplevelser. 
+               Derfor skabte vi Naturvinskassen – en lærerig vinrejse uden slutdestination, hvor medlemmerne får glæde af vores passion og hårde arbejde.
+           </p>
+           </div>
+       </div>
+       <div class="">
+            <div class="h-[500px] lg:h-[420px]  md:border-orange-500  border-t ">
+                <Image class="object-cover h-full w-full" src={VoresWish} alt="Billede af flasker fra en boks"></Image>
+            </div>
+        </div>
+    
+
+    </section>
+</article>
+
+
+<article class="relative md:hidden">
+    <!-- Erfaring og viden -->
+    <section class="relative md:h-[150vh] md:grid md:grid-cols-2  ">
+  
+        <div class= "md:mt-[65vh] md:sticky md:top-[10%] md:h-[50%] lg:h-[40%] self-start  bg-offwhite md:bg-transparent grid md:border-orange-500 md:border">
+            <div class="self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+                <h1>Erfaring & viden</h1>
+                <p>
+                    Vi har tilsammen over 30 års erfaring i restaurationsbranchen, hvor naturvin altid har været en central del af vores arbejde.
+                    Vores rejse har ført os fra Michelin-restauranter til nogle af landets bedste vinbarer, hvilket har givet os både ekspertise og passion for vinens verden. 
+                    Med denne erfaring og vores nysgerrighed stræber vi efter at skabe fantastiske oplevelser for jer.
+                </p> 
+            </div>
+            
+        </div> 
+        <div>
+            <div class=" md:w-full h-full  md:sticky md:top-[10%] md:h-[50%] lg:h-[38%] self-start md:border-orange-500 md:border-y md:border-r   ">
+                <Image class=" object-cover md:h-full  w-full" src={Erfaring} alt="Billede af en person, der hælder vin"></Image>
+            </div>
+        </div>
+ 
+       
+    </section>
+     <!-- Hvorfor naturvinskassen-->
+    <section class="relative md:h-[100vh] md:grid md:grid-cols-2  ">
+        <div class="md:mt-[30vh] md:sticky md:top-[10%] md:h-[90%] lg:h-[70%] self-start  bg-offwhite md:bg-transparent grid md:border-orange-500 md:border md:order-2">
+             <div class=" self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+            <h1 class="hyphens-auto">Hvorfor Naturvinskassen?</h1>
+            <p>
+                Vi ønskede en legeplads til vores skøre idéer, nysgerrighed efter nye vine og vinbønder samt vores trang til at dele vinoplevelser. 
+                Derfor skabte vi Naturvinskassen – en lærerig vinrejse uden slutdestination, hvor medlemmerne får glæde af vores passion og hårde arbejde.
+            </p>
+            </div>
+        </div>
+     <div class="">
+         <div class=" md:w-full h-full  md:sticky md:top-[10%] md:h-[90%] lg:h-[70%] self-start md:border-orange-500 md:border-y md:border-r  ">
+            <Image class= " md:object-cover  md:h-full  w-full" src={Hvorfor} alt="Billede af vinhylde"></Image>
+        </div>
+     </div>
+       
+    </section>
+
+     <!-- vores ønske-->
+    <section class="relative md:grid md:grid-cols-2 ">
+        <div class="   bg-offwhite md:bg-transparent grid md:border-orange-500 md:border">
+            <div class="self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+            <h1>Vores ønske</h1>
+            <p>
+                Vores arbejde med Naturvinskassen handler først og fremmest om at videreformidle og dele oplevelser, med alle vores medlemmer! Det er lige præcis dét, som vi hele tiden bestræber os på. 
+                Vi støder på rigtig, rigtig mange vinbønder og smager endnu flere vine. Noget smager godt, noget smager knap så godt, og noget smager så godt, at vi bliver nødt til at dele det med alle vores medlemmer.
+            </p>
+            </div>
+        </div>
+        <div>
+            <div class=" md:w-full h-full   md:border-orange-500 md:border-y md:border-r  ">
+                <Image class="object-cover h-full w-full" src={VoresWish} alt="Billede af flasker fra en boks"></Image>
+            </div>
+        </div>
+        
+    </section>
+</article>
+
+</MainLayout>

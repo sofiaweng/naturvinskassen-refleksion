@@ -1,0 +1,54 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Accordion from "../components/Accordion.astro";
+import { Image } from 'astro:assets';
+
+import Vin1 from "../assets/images/vin1.svg";
+import Vin2 from "../assets/images/vin2.svg";
+import Vin3 from "../assets/images/vin3.svg";
+import Vin4 from "../assets/images/vin4.svg";
+import FAQ from "../assets/images/f.a.q.svg";
+---
+
+<MainLayout>
+    <div
+         data-aos="fade-in"
+              data-aos-duration="1000"
+     class="max-w-[1100px] mx-auto py-2xl px-xs md:px-ml relative w-full">
+        <Image src={FAQ} alt="F.A.Q." class="w-[150px] md:w-[300px] h-full justify-center items-center" />
+        <div class="md:grid md:grid-cols-[3fr_1fr] md:gap-ml pt-ml md:pt-4xl md:items-start">
+            <div>
+                <Accordion caption="Hvad indeholder min kasse?" bio="Hver måned vil du som medlem af naturvinskassen modtage 3 flasker  udvalgt vin, som alle er lavet ud fra et naturligt udgangspunkt. Derudover vil du modtage en opskrift, kreeret af en restaurant og/eller  en kok, som vi har meget kær. Udførlige beskrivelser af vinene vil  selvfølgelig også medfølge, hver måned! Ved første levering modtager du  en specialdesignet proptrækker, så har du noget godt værktøj at gå i  krig med." showButton={false} />
+                <Accordion caption="Hvor tit bliver min kasse leveret?" bio="Du vil få din naturvinskasse leveret hver måned." showButton={false} />
+                <Accordion caption="Hvornår bliver min kasse leveret?" bio="Din kasse vil blive leveret til dig, i starten af måneden. Bestiller du  'Strakslevering' ved oprettelse af dit medlemskab, så vil din kasse  afsendes inden for 1 hverdag." showButton={false} />
+                <Accordion caption="Hvornår bliver min betaling trukket?" bio="Din betaling vil blive reserveret den sidste dag i måneden. Du modtager en e-mail hver gang vi opretter en automatisk ordre." showButton={false} />
+                <Accordion caption="Hvad skal jeg gøre, hvis en vin har prop?" bio="Se, det er ikke så godt! Men det finder vi selvfølgelig en løsning på.  Naturligvis hel uden meromkostning fra din side! Skriv os en mail på info@reduktivt.com, så finder vi ud af det." showButton={false} />
+                <Accordion caption="Binder jeg mig i en bestemt periode?" bio="Det gør du ikke, nej. Vi har ingen binding eller skjulte agendaer. Du  kan melde dig fra eller sætte dit abonnement på pause, præcis når du  vil." showButton={false} />
+                <Accordion caption="Hvordan bliver min vin leveret?" bio="Din kan afhente din naturvinskasse i vores butik i Aarhus, Borggade 16. Din naturvinskasse kan leveres enten til DAO Pakkeshop eller via DAO hjemmelevering. Du vælger din leveringsmetode når du bestiller dit abonnement. Bor du i Aarhus kan du få din vine leveret med Velopak's cykelbude, direkte til din bopæl." showButton={false} />
+                <Accordion caption="Kan man få leveret i hele landet?" bio="Vi levere til alle danske brofaste øer." showButton={false} />
+                <Accordion caption="Jeg skal på ferie, hvad gør jeg?" bio="Du kan til enhver tid sætte dit abonnement på pause. Dette kan du gøre her:" />
+                <Accordion caption="Hvordan opdaterer jeg kortoplysninger?" bio="Du kan opdatere dine betalingskort-oplysninger direkte fra 'Min Naturvinskasse'." />
+                <Accordion caption="Hvordan afmelder jeg abonnementet?" bio="Du kan til enhver tid stoppe eller pause dit abonnement. Dette kan du gøre her:" />
+                <Accordion caption="Hvordan ændrer jeg min leveringsadresse?" bio="Du kan skifte din adresse her:" />
+                <Accordion caption="Hvordan skifter jeg leveringsmetode?" bio="For at skifte din leveringsmetode, skal du pt. tegne et nyt abonnement. Husk at stoppe dit nuværende abonnement inden du bestiller et nyt." showButton={false} />
+            </div>
+            <div class="hidden md:flex flex-col gap-xl h-[580px] justify-center items-center">
+                <Image
+                     data-aos="fade-up"
+                 src={Vin1} alt="Vin1" class="vippe delay w-[43px] h-full object-contain" />
+                <Image
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                 src={Vin2} alt="Vin2" class="vippe w-[43px] h-full object-contain" />
+                <Image 
+                  data-aos="fade-up"
+                   data-aos-delay="800"
+                src={Vin3} alt="Vin3" class="vippe delay w-[37px] h-full object-contain" />
+                <Image 
+                  data-aos="fade-up"
+                    data-aos-delay="1000"
+                src={Vin4} alt="Vin4" class="vippe w-[34px] h-full object-contain" />
+            </div>            
+        </div>
+    </div>    
+</MainLayout>

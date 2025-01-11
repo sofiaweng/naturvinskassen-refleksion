@@ -1,0 +1,422 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import { Image } from 'astro:assets';
+
+// billeder
+import NaturvinskassenHero from "../assets/images/naturvinskassenhero.webp";
+import CykelMedVin from "../assets/images/cykelmedvin.webp";
+import MadOgVin from "../assets/images/madogvin.webp";
+import NaturvinsKassen from "../assets/images/Naturvinskassen.webp";
+
+// headlines
+import NaturvinskassenSkrift from "../assets/images/naturvinskassen-skrift.svg";
+import NaturvinsMobil from "../assets/images/naturvinsmobil.svg";
+import KassenMobil from "../assets/images/kassenmobil.svg";
+import CirkulaerTekst from "../assets/images/Cirkulaer_tekst.svg";
+
+// ikoner
+import NaturvinskassenIkon from "../assets/images/naturvinskassen-red.svg";
+import VinFlaskeRight from "../assets/images/vinflaskeright.svg";
+import Levering from "../assets/images/leveringikon.svg";
+import SkaalIkon from "../assets/images/skaal-ikon.svg";
+---
+<style>
+    h1, h2{
+        @apply italic;
+        @apply text-orange-500
+    }
+    li{
+        @apply text-body;
+    @apply sm:text-body-lg;
+    @apply font-opensans;
+    @apply font-regular;
+    }
+
+@keyframes spin-slow {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+.animate-spin-slow {
+animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotation */
+}
+</style>
+<MainLayout>
+    <article class="h-full md:h-full py-5xl md:py-8xl relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto ">
+        <!-- heading -->
+        <div
+            data-aos="fade-in"
+             data-aos-duration="500"
+         class="p-xs pt-m   absolute flex flex-col w-full md:hidden z-10">
+            <Image class="" src={NaturvinsMobil} alt="naturvins"></Image>
+            <Image class="-mt-sm" src={KassenMobil} alt="kassen"></Image>
+        </div>
+        <div
+        data-aos="fade-in"
+         data-aos-duration="500"
+         class="p-xs absolute hidden md:block md:pt-m z-10">
+            <Image class="" src={NaturvinskassenSkrift} alt="naturvinskassen tekst"></Image>
+        </div>
+        <!-- billede -->
+        <section
+          data-aos="fade-right"
+         class="p-xs w-[55%] self-end md:w-full flex z-0">
+            <Image class="place-self-end"  src={NaturvinskassenHero} alt="billede af vin i kasse"></Image>
+        </section>
+        <!-- tekst -->
+        <section
+        data-aos="fade-left"
+         class=" p-xs self-start md:self-center grid gap-sm">
+            <p>
+                Oplev naturvinens autentiske verden med vores abonnement, hvor vi <span class="font-bold leading-relaxed">hver måned leverer 3 nøje udvalgte flasker naturvin</span> direkte til din dør – fragtfrit og uden binding. Kom tæt på vinbønderne, smag vin uden manipulation, og lad dig inspirere af opskrifter og udførlige vinbeskrivelser.
+                <br><br>
+                Som medlem får du eksklusive fordele som rabatter, kassetilbud og forkøbsret på særlige vine. Start din naturvinsrejse i dag og opdag magien i naturlig vinproduktion.
+                
+                <br><br>
+                <span class="font-bold leading-relaxed">Ingen binding. Fri levering. Fuldt fleksibelt.</span>
+            </p>
+            <a href="/bestil">     
+                <Button variant="stroke">Bestil Naturvinskassen (450 DKK/md.)</Button>
+            </a>
+       
+        </section>
+    </article>
+
+
+
+<!-- Hvordan fungerer det sektion -->
+    <article class="p-xs bg-offwhite py-5xl md:py-3xl">
+        <h1
+         data-aos="fade-up"
+         class="mb-xs text-center md:mb-lg md:mt-lg">Hvordan fungerer der?</h1>
+        <!-- steps sektion -->
+        <section
+         class="py-sm flex flex-col gap-xs md:flex md:flex-row md:gap-xl px-m md:max-w-[1000px] md:m-auto md:px-0 md:py-lg ">
+            <section
+             class="flex flex-col md:flex-row gap-xs md:gap-0 relative">
+                <article
+                 data-aos="fade-up"
+                 class="flex flex-row md:flex-col md:justify-start md:gap-xxs  gap-sm ">
+                     <!-- tekst -->
+                    <div class="self-center md:self-start md:order-2">
+                    <!-- heading -->
+                    <h2 class="md:leading-5">
+                        1.
+                    </h2>
+                        <h3 class=" font-bold ">
+                            <!-- 1.
+                            <br> -->
+                            Bestil kassen
+                        </h3>
+                        <!-- brødtekst -->
+                        <p>
+                            Tilmeld dig til abonnementet – fri levering og ingen binding.
+                        </p>
+                    </div>
+                    <!-- ikon -->
+                    <div class="md:h-[120px] lg:h-[100px] self-center md:self-start  ">
+                        <Image class="" src={NaturvinskassenIkon} alt="vinflaske illustration"></Image>
+                    </div>
+                </article>
+                <!-- pil -->
+                <div
+                data-aos="fade-in"
+                 class="grid justify-items-end w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10  md:top-[10vh] lg:top-[6vh]">
+                    <div class=" bg-[url('/bue-right.svg')] aspect-[28/97] md:bg-[url('/bue-up.svg')] md:aspect-[191/44] md:w-[100%] bg-contain w-[20%] bg-no-repeat ">
+                    </div>
+                </div>
+                <!-- <div class="grid justify-items-end w-[30%] mx-auto  md:w-[50%]  md:absolute md:-right-10 md:top-[10vh]">
+                    <div class=" bg-[url('/bue-right.svg')] aspect-[28/97] md:bg-[url('/bue-up.svg')] md:aspect-[191/44] md:w-[100%] bg-contain w-[20%] bg-no-repeat ">
+                    </div>
+                </div> -->
+
+            </section>
+
+            <section class="flex flex-col md:flex-row gap-xs relative ">
+                <article 
+                data-aos="fade-up"
+                data-aos-delay="200"
+                class="flex flex-row md:flex-col md:justify-start md:gap-xxs justify-between gap-sm ">
+                     <!-- tekst -->
+                    <div class="self-center md:self-start order-2 md:order-1 grid">
+                    <!-- heading -->
+                     <div class="md:order-2">
+                        <h2 class="md:leading-5">
+                            2.
+                        </h2>
+                        <h3 class=" font-bold">
+                            <!-- 2.
+                            <br> -->
+                            Vi udvælger vin
+                        </h3>
+                     </div>
+                      
+                        <!-- brødtekst -->
+                        <p class="md:order-1 md:h-[120px] lg:h-[100px]">
+                            Hver måned håndplukker vi 3 unikke flasker fra passionerede vinbønder.
+                        </p>
+                    </div>
+                    <!-- ikon -->
+                    <div class="self-center md:self-start md:order-2 ">
+                        <Image class="aspect-[73/138] md:h-[90px] " src={VinFlaskeRight} alt="vinflaske illustration"></Image>
+                    </div>
+                </article>
+
+                <!-- pil -->
+                <div
+                  data-aos="fade-in"
+                   data-aos-delay="200"
+                 class="grid justify-items-start w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10 md:bottom-[6vh]">
+                    <div class=" bg-[url('/bue-left.svg')] aspect-[28/97] md:bg-[url('/bue-down.svg')] md:aspect-[191/44] md:w-[100%] bg-contain w-[20%] bg-no-repeat ">
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="flex flex-col md:flex-row gap-xs relative ">
+                <article
+                  data-aos="fade-up"
+                   data-aos-delay="400"
+                 class="flex flex-row md:flex-col md:gap-xxs   md:justify-start justify-between gap-sm ">
+                    <!-- tekst -->
+                    <div class="self-center md:self-start md:order-2">
+                        <!-- heading -->
+                         <h2 class="md:leading-5">
+                            3.
+                         </h2>
+                        <h3 class=" font-bold ">
+                            <!-- 3.
+                            <br> -->
+                            Levering
+                        </h3>
+                        <!-- brødtekst -->
+                        <p>
+                            Fragtfrit og bæredygtigt – i Aarhus leveres med cykelbud.
+                        </p>
+                    </div>
+                    <!-- ikon -->
+                    <div class="md:h-[120px] lg:h-[100px] self-center  md:self-start md:order-1 md:-rotate-[30deg]">
+                        <Image class="" src={Levering} alt="levering illustration"></Image>
+                    </div>
+                </article>
+                  <!-- pil -->
+                  <div
+                    data-aos="fade-in"
+                    data-aos-delay="900"
+                   class="grid justify-items-end w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10  md:top-[10vh] lg:top-[6vh]">
+                    <div class=" bg-[url('/bue-right.svg')] aspect-[28/97] md:bg-[url('/bue-up.svg')] md:aspect-[191/44] md:w-[100%] bg-contain w-[20%] bg-no-repeat ">
+                    </div>
+                </div>
+            </section>
+
+            <section class="flex flex-col md:flex-row gap-xs relative ">
+                <article
+                  data-aos="fade-up"
+                     data-aos-delay="600"
+                 class="flex flex-row md:flex-col md:gap-xxs  md:justify-end justify-between gap-sm">
+                    <!-- tekst -->
+                    <div class="self-center order-2 md:self-start md:order-1 md:grid">
+                        <!-- heading -->
+                         <div class=" md:order-2 ">
+                            <h2 class=" md:leading-5">
+                                4.
+                            </h2>
+                            <h3 class=" font-bold">
+                                <!-- 4.
+                                <br> -->
+                                Nyd vinen
+                            </h3>
+                         </div>
+                      
+                        <!-- brødtekst -->
+                        <p class="md:h-[120px] lg:h-[100px]">
+                            Smag, lær og par vinen med opskrifterne i kassen.
+                        </p>
+                    </div>
+                    <!-- ikon -->
+                    <div class="self-center md:self-start  md:order-2">
+                        <Image class="" src={SkaalIkon} alt="to vinglas der skåler illustration"></Image>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </article>
+
+
+    <!--     HVAD INDEHOLDER NATURVINSKASSEN SEKTION -->
+<div class="pt-8xl">
+  <section data-aos="fade-up" class="relative mx-auto max-w-[1000px] py-40 overflow-hidden">
+      <div class="relative mx-auto max-w-[600px] aspect-square flex items-center justify-center">
+  
+        <Image 
+          class="animate-spin-slow absolute inset-0 m-auto" 
+          src={CirkulaerTekst} 
+          alt="Cirkulær roterende tekst hvor der står 'Hvad indeholder Naturvinskassen?'"
+        />
+  
+        <Image 
+          class="relative z-10 w-[50%] md:w-[60%]" 
+          src={NaturvinsKassen} 
+          alt="Et billede af Naturvinskassen"
+        />
+      </div>
+    </section>
+    <div>
+      <h2 data-aos="fade-up" class="mt-sm  mx-s md:text-center italic text-orange-500 mb-s">
+        Når du bestiller Naturvinskassen får du:
+      </h2>
+    </div>
+      <div data-aos="fade-up" class="md:pb-8xl mx-s gap-sm grid md:grid-cols-2 md:mx-[15%] md:gap-ml">
+        <div>
+            <p class="">
+              Som medlem af Naturvinskassen modtager du hver måned <span class="font-semibold">3 flasker nøje udvalgt naturvin</span>, fremstillet med respekt for naturen og uden manipulation. Hver flaske fortæller sin egen historie og giver dig en unik smagsoplevelse.
+            </p>
+        </div>
+        <div class="">
+          <p>
+            Derudover får du:
+          </p>
+          <ol class="list-disc ml-sm">
+          <li >
+            <span class="font-semibold">Opskrifter </span>udviklet af anerkendte kokke eller eksklusive århusianske restauranter.
+          </li>
+            <li >
+              <span class="font-semibold">Vinbeskrivelser </span>der giver dig indblik i smagsnoter, oprindelse og vinbøndernes dybfølte passion.
+            </li>
+          </ol>
+        </div>
+      </div>
+</div>
+
+
+
+<!-- Tre ting du får med i pakken -->
+ <div class="bg-offwhite mt-6xl md:mt-0 md:bg-transparent">
+  <h1
+  data-aos="fade-up" 
+   class="text-center pt-xl">Fordele ved Naturvinskassen</h1>
+      <article class="md:grid md:grid-cols-3 md:pt-3xl md:h-[300vh] relative">
+
+        <!-- Medlemsfordele -->
+        <section class="md:sticky md:top-[11%]  self-start ">
+            <!-- boks rundt om tekstboks -->
+            <div class="py-m  flex md:border md:border-orange-500 ">
+                <!-- tekstboks -->
+                <div class="self-center p-xs grid gap-xs" >
+                    <h2 class="">
+                        Medlemsfordele
+                    </h2>
+                    <p >
+                        Når du abonnerer på Naturvinskassen, bliver du en del af vores 
+                        <span class="font-semibold">fællesskab</span> 
+                        og får adgang til
+                        <span class="font-semibold"> eksklusive fordele</span>:
+                    </p>
+                   <ol class="list-disc ml-sm">
+                    <li >
+                        <span class="font-semibold">10% rabat </span>på køb over 500 kr. i vores butik.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Månedlige kassetilbud</span>, hvor du kan købe særligt udvalgte vine til en god pris.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Forkøbsret på allokationsvine</span>, så du aldrig går glip af de mest eftertragtede flasker.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Velkomst- og jubilæumsgaver</span> som en tak for din loyalitet.
+                    </li>
+                  </ol>
+                </div>
+            </div>
+            <!-- billede -->
+            <div class="md:border-l md:border-b md:border-orange-500">
+                <Image src={NaturvinskassenHero} alt="billede af vin i kasse"></Image>
+            </div>
+        </section>
+
+        <!-- Smag, lær & nyd -->
+        <section class="md:mt-[70vh] md:sticky md:top-[11%]  self-start ">
+            <!-- boks rundt om tekstboks -->
+            <div class="py-m flex md:border-t md:border-r md:border-orange-500 ">
+                <!-- tekstboks -->
+                <div class="self-center p-xs grid gap-xs " >
+                    <h2 class="">
+                        Smag, lær & nyd
+                    </h2>
+                    <p >
+                        Med Naturvinskassen bliver vin ikke bare en drik – det bliver en oplevelse. 
+                        Hver måned udforsker du vinens verden gennem:
+                    </p>
+                   <ol class="list-disc ml-sm">
+                        <li >
+                            <span class="font-semibold">Historien bag flaskerne</span>: Lær om vinbøndernes metoder og lidenskab.
+                        </li>
+                        <li>
+                            <span class="font-semibold">Oprindelse og terroir</span> : Forstå, hvordan  regionen og klimaet påvirker smagen.
+                        </li>
+                        <li>
+                            <span class="font-semibold">Smagsnoter</span>: Få et dybere indblik i vinens karakter og kompleksitet.
+                        </li>
+                    </ol>
+                    <p>
+                        Vi tilføjer også 
+                        <span class="font-semibold">opskrifter </span>og 
+                        <span class="font-semibold">madanbefalinger</span>, 
+                        der gør det nemt at parre vinene med måltider 
+                        og løfte smagsoplevelsen.
+                    </p>
+                </div>
+            </div>
+            <!-- billede -->
+            <div class="md:border md:border-orange-500">
+                <Image src={MadOgVin} alt="billede af mad og vin sammen"></Image>
+            </div>
+        </section>
+
+
+        <!-- Fri levering & ingen binding -->
+        <section class=" md:mt-[120vh] md:sticky md:top-[11%] grid self-start ">
+            <!-- billede -->
+            <div class="order-2 md:order-1 md:border-t md:border-r md:border-orange-500">
+                <Image src={CykelMedVin} alt="billede af en cykel der holder på vinflasker"></Image>
+            </div>
+            <!-- boks rundt om tekstboks -->
+            <div class="py-m order-1  md:order-2 md:border-y md:border-r md:border-orange-500">
+                <!-- tekstboks -->
+                <div class="self-center p-xs  grid gap-xs" >
+                    <h2 class="">
+                        Fri levering & ingen binding
+                    </h2>
+                    <p >
+                        Hos Naturvinskassen får du <span class="font-semibold">fri levering</span> hver måned, uanset hvor i Danmark du bor – og bor du i Aarhus, leverer vi med cykelbud for at minimere miljøpåvirkningen.
+                        <br><br>
+                        Med os binder du dig aldrig. Du kan:
+                    </p>
+                   <ol class="list-disc ml-sm">
+                        <li >
+                            <span class="font-semibold">Sætte abonnementet på pause.</span>
+                        </li>
+                        <li>
+                            <span class="font-semibold">Skifte leveringsadresse.</span>
+                            
+                        </li>
+                        <li>
+                            <span class="font-semibold">Stoppe, når det passer dig.</span>
+                            
+                        </li>
+                    </ol>
+                    <p>
+                        Vi gør det nemt for dig at nyde naturvin på dine præmisser.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+ </div>
+
+</MainLayout>
