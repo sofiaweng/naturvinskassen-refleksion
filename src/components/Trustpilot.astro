@@ -1,22 +1,29 @@
 ---
 import { Image } from 'astro:assets';
 import Stjerne from "../assets/images/trustpilot_stjerne.svg";
+import Trustpilot from "../assets/images/Trustpilot_Ikon.svg";
+
 import Button from "../components/Button.astro";
+import TrustpilotCard from "../components/TrustpilotCard.astro";
 ---
 <div class="border-t border-orange-500">
-    <div class="flex flex-col p-sm max-w-[1000px] mx-auto">
-        <h2 class="text-center italic text-orange-500">
-            Anmeldelser på Trustpilot
-        </h2>
-        <div class="mx-auto max-w-[500px] grid grid-cols-5 md:gap-lg gap-m p-s">
-            <Image src={Stjerne} alt="" class="" />
-            <Image src={Stjerne} alt="" class="" />
-            <Image src={Stjerne} alt="" class="" />
-            <Image src={Stjerne} alt="" class="" />
-            <Image src={Stjerne} alt="" class="" />
+    <div class="p-sm max-w-[1000px] mx-auto">
+        <div class="flex justify-center gap-s">
+            <div>
+                <Image src={Trustpilot} alt="Trustpilot logo" class="" />
+            </div>
+            <h2 class="text-center italic text-orange-500">
+                Anmeldelser på Trustpilot
+            </h2>
+        </div>
+        <p class="flex justify-center">5 ud af 5 stjerner på Trustpilot</p>
+
+        <div class="mx-auto max-w-[500px] grid grid-cols-3 md:gap-lg gap-m p-s">
+            <TrustpilotCard />
+
         </div>
         <div class="flex justify-center md:justify-end mt-xs ">
-            <a href=""><Button variant="stroke">Læs anmeldelser (3)</Button></a>
+            <a href=""><Button variant="stroke">Læs anmeldelser</Button></a>
         </div> 
     </div>
 </div>
