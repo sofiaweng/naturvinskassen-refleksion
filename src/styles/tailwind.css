@@ -36,6 +36,7 @@
     @apply font-opensans;
     @apply text-headline3;
     @apply sm:text-headline3-lg;
+    @apply font-semibold;
   }
 
   p,
