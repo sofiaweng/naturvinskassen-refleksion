@@ -19,6 +19,8 @@
   h1,
   h2 {
     @apply font-caslon;
+    @apply italic;
+    @apply text-orange-500;
   }
   h1 {
     @apply text-headline1;
