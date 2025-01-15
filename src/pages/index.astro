@@ -32,83 +32,38 @@ import flyve3 from "../assets/images/flyve3.webp";
 import flyve4 from "../assets/images/flyve4.webp";
 import flyve5 from "../assets/images/flyve5.webp";
 import flyve6 from "../assets/images/flyve6.webp";
-
+import HeroGif1 from "../assets/images/hero-1.gif";
+import HeroGif2 from "../assets/images/hero-2.gif";
+import HeroGif3 from "../assets/images/hero-3.gif";
 ---
 
   <MainLayout title="Naturvinskassen">
-
-    <article class=" h-full py-xl pt-36 md:pt-40 relative max-w-[1000px] mx-auto p-sm">
-      <!-- tekst -->
-
-      <section class="flex flex-row gap-m lg:gap-2xl">
-
-        <!-- vinflasker -->
-        <div class="flex-col md:flex  gap-xs w-[10%] lg:w-[8%] hidden h-[70vh] lg:h-[80vh]">
-          <Image src={Vin1} alt="Vin1" class="vippe h-full w-full object-contain aspect-[33/100]" />
-          <Image src={Vin2} alt="Vin2" class="vippe delay h-full  w-full object-contain aspect-[33/100]" />
-          <Image src={Vin3} alt="Vin3" class="vippe  h-full  w-full object-contain aspect-[33/100]" />
-          <Image src={Vin4} alt="Vin4" class="vippe delay h-full  w-full object-contain aspect-[33/100]" />
-        </div>
-
-        <!-- headline og landing pics -->
-        <div class="">
-          <div class=" relative">
-            <!-- desktop headline -->
-            <div
-             class="relative">
-              <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="z-10 p-xs absolute hidden md:block -top-32" />
-            </div>
-          <!-- <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="p-xs absolute hidden md:block -top-32" />
-        
-          <Image src={MobilJoinThe} alt="Join The" class="w-[70%] max-w-[337px] absolute top-[-80px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
-          <Image src={MobilClub} alt="Club!" class="w-[50%] max-w-[215px] absolute bottom-[-80px] left-1/2 -translate-x-1/2 z-10 block md:hidden" /> -->
-            <div
-             class="grid grid-cols-2 md:gap-xs px-lg md:px-0 z-0">
-                <Image
-                data-aos="fade-right"
-                data-aos-duration="1000" src={LandingImage1} alt="Landing Image 1" class="" />
-                <Image
-                  data-aos="fade-left"
-                data-aos-duration="1000"
-                 class="pt-[70%]  md:pt-0" src={LandingImage2} alt="Landing Image 2"  />
-            </div>
-
-            <!-- mobil headline -->
-            <div class="">
-            <Image src={MobilJoinThe} alt="Join The" class="w-[85%]  absolute top-[-98px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
-            <Image src={MobilClub} alt="Club!" class="w-[50%] absolute bottom-[-70px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
-            </div>
-          </div>
-
-        <!-- headline3 og knap -->
-          <div class="grid gap-xs md:gap-sm">
-              <h3
-                data-aos="fade-up"
-               class="md:text-center pt-5xl md:pt-sm">
-                Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
-                udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
-                måned efter måned.
-              </h3>
-              <a
-              data-aos="fade-up"
-               class="flex justify-center" href="/naturvinskassen">
-                <Button variant="stroke">Læs mere her</Button>
-              </a>
-          </div>
-        </div>
-
-        <!-- vinflasker -->
-        <div class="flex-col md:flex  gap-xs w-[10%] lg:w-[8%] hidden h-[70vh] lg:h-[80vh] ">
-          <Image src={Vin5} alt="Vin1" class="vippe h-full object-contain aspect-[33/100]" />
-          <Image src={Vin6} alt="Vin2" class="vippe delay h-full object-contain aspect-[33/100]" />
-          <Image src={Vin1} alt="Vin1" class="vippe  h-full w-full object-contain aspect-[33/100]" />
-          <Image src={Vin2} alt="Vin2" class="vippe delay h-full  w-full object-contain aspect-[33/100]" />
-        </div>
-
-      </section>
-     
-
+    <article class="relative">
+      <div class="grid  md:grid-cols-3 relative ">
+        <Image src={HeroGif1} alt="" class="h-[55vh] object-cover hidden md:block" ></Image>
+        <Image src={HeroGif2} alt="" class="h-[55vh] object-cover" ></Image>
+        <Image src={HeroGif3} alt="" class="h-[55vh] object-cover hidden md:block" ></Image>
+       
+         <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="-bottom-[6vh] md:-bottom-[19vh]  md:inset-x-2 z-10  absolute max-w-5xl mx-auto " />
+   
+      </div>
+     <!-- headline3 og knap -->
+     <div class="grid gap-xs md:gap-xs max-w-[800px] mx-auto p-xs ">
+      <h3
+   
+       class="text-center pt-sm  md:pt-lg">
+        Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
+        udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
+        måned efter måned.
+      </h3>
+      <a
+       class="flex justify-center" href="/naturvinskassen">
+        <Button variant="stroke">Læs mere her</Button>
+      </a>
+  </div>
     </article>
+
+
   <!-- HERO SEKTION
   <div class="max-w-[1000px] relative w-[455px] mt-[120px] mx-auto h-[755px] flex flex-col items-center z-[0] md:w-[897px] md:h-[799px] md:mt-[100px]"> -->
     <!-- Images -->
